@@ -13,10 +13,6 @@ def search_text_in_file(file_path, search_text):
 
     return None
 
-
-
-
-
 def main():
     file_path = 'baza.txt'  # Zmień na właściwą ścieżkę do pliku txt
     last_clipboard_text = clipboard.paste()
@@ -39,13 +35,13 @@ def main():
 
 def show_gray_text(tekst):
     root = tk.Tk()
-    root.overrideredirect(True)  # Ukrycie okna głównego
-    root.attributes("-topmost", True)  # Ustawienie okna na wierzch
+    root.overrideredirect(True)
+    root.attributes("-topmost", True)
     label = tk.Label(root, text=tekst, bg='white', fg="grey", font=("Arial", 7))
     label.pack()
     while True:
         x, y = pyautogui.position()
-        root.geometry(f"+{x + 20}+{y + 20}")  # Ustawienie pozycji okna obok kursora
+        root.geometry(f"+{x + 20}+{y + 20}")
         root.update()
         root.update_idletasks()
         if keyboard.is_pressed("q"):

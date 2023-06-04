@@ -25,6 +25,7 @@ The state is not maintained by the DHCPv6 server under stateless DHCPv6 operatio
 the virtual IP address and the virtual MAC address for the HSRP group 1
 
 10. Match the forwarding characteristic to its type. (Not all options are used.)
+11,24,32,45,53,66
 11. Which statement is correct about how a Layer 2 switch determines how to forward frames?
 Frame forwarding decisions are based on MAC address and port mappings in the CAM table.
 
@@ -32,6 +33,7 @@ Frame forwarding decisions are based on MAC address and port mappings in the CAM
 The broadcast domain expands to all switches.
 
 13. Match the link state to the interface and protocol status. (Not all options are used.)
+11,22,34,45
 14.Refer to the exhibit. How is a frame sent from PCA forwarded to PCC if the MAC address table on switch SW1 is empty?
 SW1 floods the frame on all ports on SW1, excluding the port through which the frame entered the switch.
 
@@ -39,7 +41,7 @@ SW1 floods the frame on all ports on SW1, excluding the port through which the f
 Because these VLANs are stored in a file that is called vlan.dat that is located in flash memory, this file must be manually deleted.
 
 16. Match the description to the correct VLAN type. (Not all options are used.)
-
+12,24,31,43
 17. Refer to the exhibit. A network administrator has connected two switches together using EtherChannel technology. If STP is running, what will be the end result?
 STP will block one of the redundant links.
 
@@ -110,6 +112,7 @@ no ip route
 42. Refer to the exhibit. What can be concluded about the configuration shown on R1?
 R1 is configured as a DHCPv4 relay agent.
 43. Match the step to each switch boot sequence description. (Not all options are used.)
+3,0,1,4,2,5,6
 44. Refer to the exhibit. R1 has been configured as shown. However, PC1 is not able to receive an IPv4 address. What is the problem?
 The ip helper-address command was applied on the wrong interface.
 
@@ -243,6 +246,7 @@ MAC address of the virtual router
 The host sends an ICMPv6 neighbor solicitation message to the DHCP or SLAAC-learned address and if no neighbor advertisement is returned, the address is considered unique.
 
 93. Match the purpose with its DHCP message type. (Not all options are used.)
+12,21,35,44
 94. Which protocol adds security to remote connections?
 SSH
 95. Refer to the exhibit. A network administrator is verifying the configuration of inter-VLAN routing. Users complain that PC2 cannot communicate with PC1. Based on the output, what is the possible cause of the problem?
@@ -283,6 +287,7 @@ Disable DTP.
 Set the native VLAN to an unused VLAN.
 
 108. Match the DHCP message types to the order of the DHCPv4 process. (Not all options are used.)
+4,3,1,0,0,2
 109. In which situation would a technician use the show interfaces switch command?
 when packets are being dropped from a particular directly attached host
 
@@ -320,6 +325,27 @@ B. The encapsulation is misconfigured on a subinterface.
 PortFast is not configured on all access ports.
 RSTP
 STP
+117. On a Cisco 3504 WLC Summary page ( Advanced > Summary ), which tab allows a network administrator to configure a particular WLAN with a WPA2 policy?
+WLANs
+118. Refer to the exhibit. A network engineer is configuring IPv6 routing on the network. Which command issued on router HQ will configure a default route to the Internet to forward packets to an IPv6 destination network that is not listed in the routing table?​
+ipv6 route ::/0 serial 0/1/1
+119. Users are complaining of sporadic access to the internet every afternoon. What should be done or checked?
+Check the statistics on the default route for oversaturation.
+120. What action takes place when the source MAC address of a frame entering a switch appears in the MAC address table associated with a different port?
+The switch replaces the old entry and uses the more current port.
+121. A network administrator is configuring a WLAN. Why would the administrator use a WLAN controller?
+to facilitate group configuration and management of multiple WLANs through a WLC
+123. Which three statements accurately describe duplex and speed settings on Cisco 2960 switches? (Choose three.)
+An autonegotiation failure can result in connectivity issues.
+When the speed is set to 1000 Mb/s, the switch ports will operate in full-duplex mode.
+The duplex and speed settings of each switch port can be manually configured.
+124. Refer to the exhibit. A network administrator configures R1 for inter-VLAN routing between VLAN 10 and VLAN 20. However, the devices in VLAN 10 and VLAN 20 cannot communicate. Based on the configuration in the exhibit, what is a possible cause for the problem?
+The encapsulation is misconfigured on a subinterface.
+A network administrator uses the spanning-tree portfast bpduguard default global configuration command to enable BPDU guard on a switch. However, BPDU guard is not activated on all access ports. What is the cause of the issue?
+PortFast is not configured on all access ports.
+126. Which two types of spanning tree protocols can cause suboptimal traffic flows because they assume only one spanning-tree instance for the entire bridged network? (Choose two.)
+RSTP
+STP
 127. Refer to the exhibit. A network administrator is configuring the router R1 for IPv6 address assignment. Based on the partial configuration, which IPv6 global unicast address assignment scheme does the administrator intend to implement?
 stateful
 128. A WLAN engineer deploys a WLC and five wireless APs using the CAPWAP protocol with the DTLS feature to secure the control plane of the network devices. While testing the wireless network, the WLAN engineer notices that data traffic is being exchanged between the WLC and the APs in plain-text and is not being encrypted. What is the most likely reason for this?
@@ -332,10 +358,13 @@ Configure the existing VTP domain name on the new switch.
 to Fa0/1, Fa0/2, and Fa0/3 only
 131. What action takes place when the source MAC address of a frame entering a switch is not in the MAC address table?
 The switch adds the MAC address and incoming port number to the table.
+132. Employees are unable to connect to servers on one of the internal networks. What should be done or checked?
 Use the “show ip interface brief” command to see if an interface is down.
 133. What is the effect of entering the ip dhcp snooping configuration command on a switch?
 It enables DHCP snooping globally on a switch.
+134. An administrator notices that large numbers of packets are being dropped on one of the branch routers. What should be done or checked?
 Check the routing table for a missing static route.
+135. What are two switch characteristics that could help alleviate network congestion? (Choose two.)
 fast internal switching
 large frame buffers
 136. What is a result of connecting two or more switches together?
@@ -347,6 +376,7 @@ It enables port security on an interface.
 140. A network administrator is configuring a WLAN. Why would the administrator use multiple lightweight APs?
 to facilitate group configuration and management of multiple WLANs through a WLC
 141. Refer to the exhibit. PC-A and PC-B are both in VLAN 60. PC-A is unable to communicate with PC-B. What is the problem?
+The VLAN that is used by PC-A is not in the list of allowed VLANs on the trunk.
 142. A network administrator is configuring a WLAN. Why would the administrator use RADIUS servers on the network?
 to restrict access to the WLAN by authorized, authenticated users only
 It disables DTP on a non-trunking interface.
@@ -359,8 +389,11 @@ to eliminate outsiders scanning for available SSIDs in the area
 
 147. What action takes place when a frame entering a switch has a unicast destination MAC address that is not in the MAC address table?
 The switch will forward the frame out all ports except the incoming port.
+148. A junior technician was adding a route to a LAN router. A traceroute to a device on the new network revealed a wrong path and unreachable status. What should be done or checked?
 Check the configuration of the exit interface on the new static route.
+149. What is the effect of entering the ip arp inspection vlan 10 configuration command on a switch?
 It enables DAI on specific switch interfaces previously configured with DHCP snooping.
+150. What protocol or technology manages trunk negotiations between switches?
 DTP
 151. A network administrator is configuring a WLAN. Why would the administrator apply WPA2 with AES to the WLAN?
 to provide privacy and integrity to wireless traffic by using encryption
@@ -389,11 +422,13 @@ Dynamic ARP Inspection
 PVST+ optimizes performance on the network through load sharing.
 163. What protocol or technology uses a standby router to assume packet-forwarding responsibility if the active router fails?
 HSRP
+164. What is the effect of entering the show ip dhcp snooping binding configuration command on a switch?
 It displays the IP-to-MAC address associations for switch interfaces.
+165. What action takes place when the source MAC address of a frame entering a switch is in the MAC address table?
 The switch updates the refresh timer for the entry.
 166. A small publishing company has a network design such that when a broadcast is sent on the LAN, 200 devices receive the transmitted broadcast. How can the network administrator reduce the number of devices that receive broadcast traffic?
 Segment the LAN into smaller LANs and route between them.*
-
+167. What defines a host route on a Cisco router?
 An IPv4 static host route configuration uses a destination IP address of a specific device and a /32 subnet mask.
 168. What else is required when configuring an IPv6 static route using a next-hop link-local address?
 interface number and type
